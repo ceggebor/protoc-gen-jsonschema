@@ -174,7 +174,7 @@ type PluginOptions struct {
 	//default: Draft202012
 	//example:
 	//- --jsonschema_opt=draft=Draft202012
-	Draft Draft `protobuf:"varint,12,opt,name=draft,proto3,enum=pubg.jsonschema.Draft" json:"draft,omitempty"`
+	Draft Draft `protobuf:"varint,12,opt,name=draft,proto3,enum=ceggebor.jsonschema.Draft" json:"draft,omitempty"`
 	//*
 	//mandatory_nullable determines whether this plugin should treat optional field as nullable.
 	//Many programming languages do not differentiate between undefined and null.
@@ -870,7 +870,7 @@ type EnumOptions struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	MappingType EnumOptions_MappingType `protobuf:"varint,1,opt,name=mapping_type,json=mappingType,proto3,enum=pubg.jsonschema.EnumOptions_MappingType" json:"mapping_type,omitempty"`
+	MappingType EnumOptions_MappingType `protobuf:"varint,1,opt,name=mapping_type,json=mappingType,proto3,enum=ceggebor.jsonschema.EnumOptions_MappingType" json:"mapping_type,omitempty"`
 	Title       string                  `protobuf:"bytes,2,opt,name=title,proto3" json:"title,omitempty"`
 	Description string                  `protobuf:"bytes,3,opt,name=description,proto3" json:"description,omitempty"`
 }
@@ -980,7 +980,7 @@ var file_jsonschema_proto_extTypes = []protoimpl.ExtensionInfo{
 		ExtendedType:  (*descriptorpb.FileOptions)(nil),
 		ExtensionType: (*FileOptions)(nil),
 		Field:         11341,
-		Name:          "pubg.jsonschema.file",
+		Name:          "ceggebor.jsonschema.file",
 		Tag:           "bytes,11341,opt,name=file",
 		Filename:      "jsonschema.proto",
 	},
@@ -988,7 +988,7 @@ var file_jsonschema_proto_extTypes = []protoimpl.ExtensionInfo{
 		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
 		ExtensionType: (*MessageOptions)(nil),
 		Field:         11342,
-		Name:          "pubg.jsonschema.message",
+		Name:          "ceggebor.jsonschema.message",
 		Tag:           "bytes,11342,opt,name=message",
 		Filename:      "jsonschema.proto",
 	},
@@ -996,7 +996,7 @@ var file_jsonschema_proto_extTypes = []protoimpl.ExtensionInfo{
 		ExtendedType:  (*descriptorpb.FieldOptions)(nil),
 		ExtensionType: (*FieldOptions)(nil),
 		Field:         11343,
-		Name:          "pubg.jsonschema.field",
+		Name:          "ceggebor.jsonschema.field",
 		Tag:           "bytes,11343,opt,name=field",
 		Filename:      "jsonschema.proto",
 	},
@@ -1004,7 +1004,7 @@ var file_jsonschema_proto_extTypes = []protoimpl.ExtensionInfo{
 		ExtendedType:  (*descriptorpb.EnumOptions)(nil),
 		ExtensionType: (*EnumOptions)(nil),
 		Field:         11344,
-		Name:          "pubg.jsonschema.enum",
+		Name:          "ceggebor.jsonschema.enum",
 		Tag:           "bytes,11344,opt,name=enum",
 		Filename:      "jsonschema.proto",
 	},
@@ -1012,7 +1012,7 @@ var file_jsonschema_proto_extTypes = []protoimpl.ExtensionInfo{
 		ExtendedType:  (*descriptorpb.EnumValueOptions)(nil),
 		ExtensionType: (*EnumValueOptions)(nil),
 		Field:         11345,
-		Name:          "pubg.jsonschema.enum_value",
+		Name:          "ceggebor.jsonschema.enum_value",
 		Tag:           "bytes,11345,opt,name=enum_value",
 		Filename:      "jsonschema.proto",
 	},
@@ -1020,31 +1020,31 @@ var file_jsonschema_proto_extTypes = []protoimpl.ExtensionInfo{
 
 // Extension fields to descriptorpb.FileOptions.
 var (
-	// optional pubg.jsonschema.FileOptions file = 11341;
+	// optional ceggebor.jsonschema.FileOptions file = 11341;
 	E_File = &file_jsonschema_proto_extTypes[0]
 )
 
 // Extension fields to descriptorpb.MessageOptions.
 var (
-	// optional pubg.jsonschema.MessageOptions message = 11342;
+	// optional ceggebor.jsonschema.MessageOptions message = 11342;
 	E_Message = &file_jsonschema_proto_extTypes[1]
 )
 
 // Extension fields to descriptorpb.FieldOptions.
 var (
-	// optional pubg.jsonschema.FieldOptions field = 11343;
+	// optional ceggebor.jsonschema.FieldOptions field = 11343;
 	E_Field = &file_jsonschema_proto_extTypes[2]
 )
 
 // Extension fields to descriptorpb.EnumOptions.
 var (
-	// optional pubg.jsonschema.EnumOptions enum = 11344;
+	// optional ceggebor.jsonschema.EnumOptions enum = 11344;
 	E_Enum = &file_jsonschema_proto_extTypes[3]
 )
 
 // Extension fields to descriptorpb.EnumValueOptions.
 var (
-	// optional pubg.jsonschema.EnumValueOptions enum_value = 11345;
+	// optional ceggebor.jsonschema.EnumValueOptions enum_value = 11345;
 	E_EnumValue = &file_jsonschema_proto_extTypes[4]
 )
 
@@ -1249,44 +1249,44 @@ func file_jsonschema_proto_rawDescGZIP() []byte {
 var file_jsonschema_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_jsonschema_proto_msgTypes = make([]protoimpl.MessageInfo, 10)
 var file_jsonschema_proto_goTypes = []interface{}{
-	(Draft)(0),                            // 0: pubg.jsonschema.Draft
-	(EnumOptions_MappingType)(0),          // 1: pubg.jsonschema.EnumOptions.MappingType
-	(*PluginOptions)(nil),                 // 2: pubg.jsonschema.PluginOptions
-	(*FileOptions)(nil),                   // 3: pubg.jsonschema.FileOptions
-	(*MessageOptions)(nil),                // 4: pubg.jsonschema.MessageOptions
-	(*ObjectKeywords)(nil),                // 5: pubg.jsonschema.ObjectKeywords
-	(*FieldOptions)(nil),                  // 6: pubg.jsonschema.FieldOptions
-	(*ArrayKeywords)(nil),                 // 7: pubg.jsonschema.ArrayKeywords
-	(*NumericKeywords)(nil),               // 8: pubg.jsonschema.NumericKeywords
-	(*StringKeywords)(nil),                // 9: pubg.jsonschema.StringKeywords
-	(*EnumOptions)(nil),                   // 10: pubg.jsonschema.EnumOptions
-	(*EnumValueOptions)(nil),              // 11: pubg.jsonschema.EnumValueOptions
-	(*anypb.Any)(nil),                     // 12: google.protobuf.Any
-	(*descriptorpb.FileOptions)(nil),      // 13: google.protobuf.FileOptions
-	(*descriptorpb.MessageOptions)(nil),   // 14: google.protobuf.MessageOptions
-	(*descriptorpb.FieldOptions)(nil),     // 15: google.protobuf.FieldOptions
-	(*descriptorpb.EnumOptions)(nil),      // 16: google.protobuf.EnumOptions
-	(*descriptorpb.EnumValueOptions)(nil), // 17: google.protobuf.EnumValueOptions
+	(Draft)(0),                            // 0: ceggebor.jsonschema.Draft
+	(EnumOptions_MappingType)(0),          // 1: ceggebor.jsonschema.EnumOptions.MappingType
+	(*PluginOptions)(nil),                 // 2: ceggebor.jsonschema.PluginOptions
+	(*FileOptions)(nil),                   // 3: ceggeborceggebor.jsonschema.FileOptions
+	(*MessageOptions)(nil),                // 4: ceggebor.jsonschema.MessageOptions
+	(*ObjectKeywords)(nil),                // 5: ceggebor.jsonschema.ObjectKeywords
+	(*FieldOptions)(nil),                  // 6: ceggebor.jsonschema.FieldOptions
+	(*ArrayKeywords)(nil),                 // 7: ceggebor.jsonschema.ArrayKeywords
+	(*NumericKeywords)(nil),               // 8: ceggebor.jsonschema.NumericKeywords
+	(*StringKeywords)(nil),                // 9: ceggebor.jsonschema.StringKeywords
+	(*EnumOptions)(nil),                   // 10: ceggebor.jsonschema.EnumOptions
+	(*EnumValueOptions)(nil),              // 11: ceggebor.jsonschema.EnumValueOptions
+	(*anypb.Any)(nil),                     // 12: ceggebor.protobuf.Any
+	(*descriptorpb.FileOptions)(nil),      // 13: ceggebor.protobuf.FileOptions
+	(*descriptorpb.MessageOptions)(nil),   // 14: ceggebor.protobuf.MessageOptions
+	(*descriptorpb.FieldOptions)(nil),     // 15: ceggebor.protobuf.FieldOptions
+	(*descriptorpb.EnumOptions)(nil),      // 16: ceggebor.protobuf.EnumOptions
+	(*descriptorpb.EnumValueOptions)(nil), // 17: ceggebor.protobuf.EnumValueOptions
 }
 var file_jsonschema_proto_depIdxs = []int32{
-	0,  // 0: pubg.jsonschema.PluginOptions.draft:type_name -> pubg.jsonschema.Draft
-	5,  // 1: pubg.jsonschema.MessageOptions.object:type_name -> pubg.jsonschema.ObjectKeywords
-	12, // 2: pubg.jsonschema.FieldOptions.default:type_name -> google.protobuf.Any
-	7,  // 3: pubg.jsonschema.FieldOptions.array:type_name -> pubg.jsonschema.ArrayKeywords
-	8,  // 4: pubg.jsonschema.FieldOptions.numeric:type_name -> pubg.jsonschema.NumericKeywords
-	9,  // 5: pubg.jsonschema.FieldOptions.string:type_name -> pubg.jsonschema.StringKeywords
-	1,  // 6: pubg.jsonschema.EnumOptions.mapping_type:type_name -> pubg.jsonschema.EnumOptions.MappingType
-	12, // 7: pubg.jsonschema.EnumValueOptions.custom_value:type_name -> google.protobuf.Any
-	13, // 8: pubg.jsonschema.file:extendee -> google.protobuf.FileOptions
-	14, // 9: pubg.jsonschema.message:extendee -> google.protobuf.MessageOptions
-	15, // 10: pubg.jsonschema.field:extendee -> google.protobuf.FieldOptions
-	16, // 11: pubg.jsonschema.enum:extendee -> google.protobuf.EnumOptions
-	17, // 12: pubg.jsonschema.enum_value:extendee -> google.protobuf.EnumValueOptions
-	3,  // 13: pubg.jsonschema.file:type_name -> pubg.jsonschema.FileOptions
-	4,  // 14: pubg.jsonschema.message:type_name -> pubg.jsonschema.MessageOptions
-	6,  // 15: pubg.jsonschema.field:type_name -> pubg.jsonschema.FieldOptions
-	10, // 16: pubg.jsonschema.enum:type_name -> pubg.jsonschema.EnumOptions
-	11, // 17: pubg.jsonschema.enum_value:type_name -> pubg.jsonschema.EnumValueOptions
+	0,  // 0: ceggebor.jsonschema.PluginOptions.draft:type_name -> ceggebor.jsonschema.Draft
+	5,  // 1: ceggebor.jsonschema.MessageOptions.object:type_name -> ceggebor.jsonschema.ObjectKeywords
+	12, // 2: ceggebor.jsonschema.FieldOptions.default:type_name -> google.protobuf.Any
+	7,  // 3: ceggebor.jsonschema.FieldOptions.array:type_name -> ceggebor.jsonschema.ArrayKeywords
+	8,  // 4: ceggebor.jsonschema.FieldOptions.numeric:type_name -> ceggebor.jsonschema.NumericKeywords
+	9,  // 5: ceggebor.jsonschema.FieldOptions.string:type_name -> ceggebor.jsonschema.StringKeywords
+	1,  // 6: ceggebor.jsonschema.EnumOptions.mapping_type:type_name -> ceggebor.jsonschema.EnumOptions.MappingType
+	12, // 7: ceggebor.jsonschema.EnumValueOptions.custom_value:type_name -> google.protobuf.Any
+	13, // 8: ceggebor.jsonschema.file:extendee -> google.protobuf.FileOptions
+	14, // 9: ceggebor.jsonschema.message:extendee -> google.protobuf.MessageOptions
+	15, // 10: ceggebor.jsonschema.field:extendee -> google.protobuf.FieldOptions
+	16, // 11: ceggebor.jsonschema.enum:extendee -> google.protobuf.EnumOptions
+	17, // 12: ceggebor.jsonschema.enum_value:extendee -> google.protobuf.EnumValueOptions
+	3,  // 13: ceggebor.jsonschema.file:type_name -> ceggebor.jsonschema.FileOptions
+	4,  // 14: ceggebor.jsonschema.message:type_name -> ceggebor.jsonschema.MessageOptions
+	6,  // 15: ceggebor.jsonschema.field:type_name -> ceggebor.jsonschema.FieldOptions
+	10, // 16: ceggebor.jsonschema.enum:type_name -> ceggebor.jsonschema.EnumOptions
+	11, // 17: ceggebor.jsonschema.enum_value:type_name -> ceggebor.jsonschema.EnumValueOptions
 	18, // [18:18] is the sub-list for method output_type
 	18, // [18:18] is the sub-list for method input_type
 	13, // [13:18] is the sub-list for extension type_name

@@ -4,19 +4,19 @@
 ## Table of Contents
 
 - [jsonschema.proto](#jsonschema-proto)
-    - [ArrayKeywords](#pubg-jsonschema-ArrayKeywords)
-    - [EnumOptions](#pubg-jsonschema-EnumOptions)
-    - [EnumValueOptions](#pubg-jsonschema-EnumValueOptions)
-    - [FieldOptions](#pubg-jsonschema-FieldOptions)
-    - [FileOptions](#pubg-jsonschema-FileOptions)
-    - [MessageOptions](#pubg-jsonschema-MessageOptions)
-    - [NumericKeywords](#pubg-jsonschema-NumericKeywords)
-    - [ObjectKeywords](#pubg-jsonschema-ObjectKeywords)
-    - [PluginOptions](#pubg-jsonschema-PluginOptions)
-    - [StringKeywords](#pubg-jsonschema-StringKeywords)
+    - [ArrayKeywords](#ceggebor-jsonschema-ArrayKeywords)
+    - [EnumOptions](#ceggebor-jsonschema-EnumOptions)
+    - [EnumValueOptions](#ceggebor-jsonschema-EnumValueOptions)
+    - [FieldOptions](#ceggebor-jsonschema-FieldOptions)
+    - [FileOptions](#ceggebor-jsonschema-FileOptions)
+    - [MessageOptions](#ceggebor-jsonschema-MessageOptions)
+    - [NumericKeywords](#ceggebor-jsonschema-NumericKeywords)
+    - [ObjectKeywords](#ceggebor-jsonschema-ObjectKeywords)
+    - [PluginOptions](#ceggebor-jsonschema-PluginOptions)
+    - [StringKeywords](#ceggebor-jsonschema-StringKeywords)
   
-    - [Draft](#pubg-jsonschema-Draft)
-    - [EnumOptions.MappingType](#pubg-jsonschema-EnumOptions-MappingType)
+    - [Draft](#ceggebor-jsonschema-Draft)
+    - [EnumOptions.MappingType](#ceggebor-jsonschema-EnumOptions-MappingType)
   
     - [File-level Extensions](#jsonschema-proto-extensions)
     - [File-level Extensions](#jsonschema-proto-extensions)
@@ -35,7 +35,7 @@
 
 
 
-<a name="pubg-jsonschema-ArrayKeywords"></a>
+<a name="ceggebor-jsonschema-ArrayKeywords"></a>
 
 ### ArrayKeywords
 
@@ -52,7 +52,7 @@
 
 
 
-<a name="pubg-jsonschema-EnumOptions"></a>
+<a name="ceggebor-jsonschema-EnumOptions"></a>
 
 ### EnumOptions
 
@@ -60,7 +60,7 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| mapping_type | [EnumOptions.MappingType](#pubg-jsonschema-EnumOptions-MappingType) |  |  |
+| mapping_type | [EnumOptions.MappingType](#ceggebor-jsonschema-EnumOptions-MappingType) |  |  |
 | title | [string](#string) |  |  |
 | description | [string](#string) |  |  |
 
@@ -69,7 +69,7 @@
 
 
 
-<a name="pubg-jsonschema-EnumValueOptions"></a>
+<a name="ceggebor-jsonschema-EnumValueOptions"></a>
 
 ### EnumValueOptions
 
@@ -84,7 +84,7 @@
 
 
 
-<a name="pubg-jsonschema-FieldOptions"></a>
+<a name="ceggebor-jsonschema-FieldOptions"></a>
 
 ### FieldOptions
 
@@ -97,16 +97,16 @@
 | description | [string](#string) |  |  |
 | nullable | [bool](#bool) |  |  |
 | default | [google.protobuf.Any](#google-protobuf-Any) |  |  |
-| array | [ArrayKeywords](#pubg-jsonschema-ArrayKeywords) |  |  |
-| numeric | [NumericKeywords](#pubg-jsonschema-NumericKeywords) |  |  |
-| string | [StringKeywords](#pubg-jsonschema-StringKeywords) |  |  |
+| array | [ArrayKeywords](#ceggebor-jsonschema-ArrayKeywords) |  |  |
+| numeric | [NumericKeywords](#ceggebor-jsonschema-NumericKeywords) |  |  |
+| string | [StringKeywords](#ceggebor-jsonschema-StringKeywords) |  |  |
 
 
 
 
 
 
-<a name="pubg-jsonschema-FileOptions"></a>
+<a name="ceggebor-jsonschema-FileOptions"></a>
 
 ### FileOptions
 
@@ -124,7 +124,7 @@
 
 
 
-<a name="pubg-jsonschema-MessageOptions"></a>
+<a name="ceggebor-jsonschema-MessageOptions"></a>
 
 ### MessageOptions
 
@@ -135,14 +135,14 @@
 | visibility_level | [uint32](#uint32) |  | WIP: visibility_level is used to determine which message should be generated. Currently not work. |
 | title | [string](#string) |  |  |
 | description | [string](#string) |  |  |
-| object | [ObjectKeywords](#pubg-jsonschema-ObjectKeywords) |  |  |
+| object | [ObjectKeywords](#ceggebor-jsonschema-ObjectKeywords) |  |  |
 
 
 
 
 
 
-<a name="pubg-jsonschema-NumericKeywords"></a>
+<a name="ceggebor-jsonschema-NumericKeywords"></a>
 
 ### NumericKeywords
 
@@ -161,7 +161,7 @@
 
 
 
-<a name="pubg-jsonschema-ObjectKeywords"></a>
+<a name="ceggebor-jsonschema-ObjectKeywords"></a>
 
 ### ObjectKeywords
 
@@ -178,7 +178,7 @@
 
 
 
-<a name="pubg-jsonschema-PluginOptions"></a>
+<a name="ceggebor-jsonschema-PluginOptions"></a>
 
 ### PluginOptions
 Not extendable, just define structure
@@ -197,7 +197,7 @@ default: .schema.json example: - --jsonschema_opt=output_file_suffix=.schema.jso
 | pretty_json_output | [bool](#bool) |  | pretty_json_output is used to determine output json should be pretty printed. This option is only used when output_file_suffix is &#39;.json&#39;.
 
 default: true example: - --jsonschema_opt=pretty_json_output=true - --jsonschema_opt=pretty_json_output=false |
-| draft | [Draft](#pubg-jsonschema-Draft) |  | draft is used to determine which draft version should be used.
+| draft | [Draft](#ceggebor-jsonschema-Draft) |  | draft is used to determine which draft version should be used.
 
 default: Draft202012 example: - --jsonschema_opt=draft=Draft202012 |
 | mandatory_nullable | [bool](#bool) |  | mandatory_nullable determines whether this plugin should treat optional field as nullable. Many programming languages do not differentiate between undefined and null. However, scripting languages like JavaScript and TypeScript can distinguish between them. By default, optional field is treated as nullable and undefined.
@@ -212,7 +212,7 @@ default: false example: - --jsonschema_opt=int64_as_string=true - --jsonschema_o
 
 
 
-<a name="pubg-jsonschema-StringKeywords"></a>
+<a name="ceggebor-jsonschema-StringKeywords"></a>
 
 ### StringKeywords
 
@@ -232,7 +232,7 @@ default: false example: - --jsonschema_opt=int64_as_string=true - --jsonschema_o
  
 
 
-<a name="pubg-jsonschema-Draft"></a>
+<a name="ceggebor-jsonschema-Draft"></a>
 
 ### Draft
 
@@ -249,7 +249,7 @@ default: false example: - --jsonschema_opt=int64_as_string=true - --jsonschema_o
 
 
 
-<a name="pubg-jsonschema-EnumOptions-MappingType"></a>
+<a name="ceggebor-jsonschema-EnumOptions-MappingType"></a>
 
 ### EnumOptions.MappingType
 

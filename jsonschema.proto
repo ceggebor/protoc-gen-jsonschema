@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package pubg.jsonschema;
+package ceggebor.jsonschema;
 option go_package = "github.com/ceggebor/protoc-gen-jsonschema/pkg/proto";
 
 import "google/protobuf/descriptor.proto";
