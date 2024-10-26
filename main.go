@@ -9,7 +9,7 @@ import (
 	"google.golang.org/protobuf/types/pluginpb"
 )
 
-var version string = "1.0.0"
+var version string = "0.1.0"
 
 const helpMessage = `Usage protoc-gen-jsonschema:
 protoc --jsonschema_out=. (OPTIONS) *.proto
