@@ -1,10 +1,10 @@
-module github.com/pubg/protoc-gen-jsonschema/testdata
+module github.com/ceggebor/protoc-gen-jsonschema/testdata
 
 go 1.21.1
 
 require (
 	github.com/lyft/protoc-gen-star/v2 v2.0.3
-	github.com/pubg/protoc-gen-jsonschema v0.0.0
+	github.com/ceggebor/protoc-gen-jsonschema v0.0.0
 	github.com/samber/lo v1.38.1
 	github.com/stretchr/testify v1.8.2
 	k8s.io/apimachinery v0.28.1
@@ -25,4 +25,4 @@ require (
 	sigs.k8s.io/yaml v1.3.0 // indirect
 )
 
-replace github.com/pubg/protoc-gen-jsonschema => ../
+replace github.com/ceggebor/protoc-gen-jsonschema => ../

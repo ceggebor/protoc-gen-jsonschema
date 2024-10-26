@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"slices"
 
+	"github.com/ceggebor/protoc-gen-jsonschema/pkg/jsonschema"
+	"github.com/ceggebor/protoc-gen-jsonschema/pkg/proto"
 	pgs "github.com/lyft/protoc-gen-star/v2"
-	"github.com/pubg/protoc-gen-jsonschema/pkg/jsonschema"
-	"github.com/pubg/protoc-gen-jsonschema/pkg/proto"
 	"github.com/samber/lo"
 	"google.golang.org/protobuf/types/known/anypb"
 )
@@ -341,12 +341,29 @@ func buildFromWellKnownField(field pgs.Field, fo *proto.FieldOptions) *jsonschem
 		schema.Type = "object"
 	case WellKnownTypeNullValue:
 		schema.Type = "null"
+	case WellKnownTypeListValue:
+		schema.AnyOf = []*jsonschema.Schema{
+			{Type: "string"},
+			{Type: "number"},
+			{Type: "object"},
+			{Type: "array"},
+			{Type: "boolean"},
+			{Type: "null"},
+		}
+		schema = wrapSchemaInArray(schema, field, fo)
+	case WellKnownTypeValue:
+		schema.AnyOf = []*jsonschema.Schema{
+			{Type: "string"},
+			{Type: "number"},
+			{Type: "object"},
+			{Type: "array"},
+			{Type: "boolean"},
+			{Type: "null"},
+		}
 	}
 
 	if field.Type().IsRepeated() {
 		return wrapSchemaInArray(schema, field, fo)
-	} else {
-		return schema
 	}
 	return schema
 }
@@ -363,6 +380,8 @@ const (
 	WellKnownTypeDuration
 	WellKnownTypeAny
 	WellKnownTypeNullValue
+	WellKnownTypeListValue
+	WellKnownTypeValue
 )
 
 func getWellKnownFieldType(field pgs.Field) WellKnownFieldType {
@@ -385,6 +404,10 @@ func getWellKnownFieldType(field pgs.Field) WellKnownFieldType {
 		return WellKnownTypeAny
 	case ".google.protobuf.NullValue":
 		return WellKnownTypeNullValue
+	case ".google.protobuf.Value":
+		return WellKnownTypeValue
+	case ".google.protobuf.ListValue":
+		return WellKnownTypeListValue	
 	default:
 		return WellKnownTypeNone
 	}

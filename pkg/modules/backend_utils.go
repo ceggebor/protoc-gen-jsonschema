@@ -1,8 +1,8 @@
 package modules
 
 import (
+	"github.com/ceggebor/protoc-gen-jsonschema/pkg/proto"
 	pgs "github.com/lyft/protoc-gen-star/v2"
-	"github.com/pubg/protoc-gen-jsonschema/pkg/proto"
 )
 
 func getEntrypointFromFile(file pgs.File, pluginOptions *proto.PluginOptions) pgs.Message {

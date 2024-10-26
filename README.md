@@ -6,10 +6,10 @@
 
 If you have go runtime, you can `go install` it.
 ```
-go install github.com/pubg/protoc-gen-jsonschema
+go install github.com/ceggebor/protoc-gen-jsonschema
 ```
 
-Alternatively, you can download pre-built binary from [Github Release](https://github.com/pubg/protoc-gen-jsonschema/releases).
+Alternatively, you can download pre-built binary from [Github Release](https://github.com/ceggebor/protoc-gen-jsonschema/releases).
 
 # Usage
 
@@ -143,6 +143,8 @@ Check out the [Options](./options.md) file to see auto-generated options.
 | google.protobuf.Duration                        |
 | google.protobuf.Any                             |
 | google.protobuf.NullValue                       |
+| google.protobuf.Value                           |
+| google.protobuf.ListValue                       |
 
 If you'd like contribute well-known types, Please check [generator](./pkg/modules/1_middleend_generator.go) file.
 

@@ -1,14 +1,14 @@
 package modules
 
 import (
+	"github.com/ceggebor/protoc-gen-jsonschema/pkg/jsonschema"
+	"github.com/ceggebor/protoc-gen-jsonschema/pkg/jsonschema/draft_04"
+	"github.com/ceggebor/protoc-gen-jsonschema/pkg/jsonschema/draft_06"
+	"github.com/ceggebor/protoc-gen-jsonschema/pkg/jsonschema/draft_07"
+	"github.com/ceggebor/protoc-gen-jsonschema/pkg/jsonschema/draft_201909"
+	"github.com/ceggebor/protoc-gen-jsonschema/pkg/jsonschema/draft_202012"
+	"github.com/ceggebor/protoc-gen-jsonschema/pkg/proto"
 	pgs "github.com/lyft/protoc-gen-star/v2"
-	"github.com/pubg/protoc-gen-jsonschema/pkg/jsonschema"
-	"github.com/pubg/protoc-gen-jsonschema/pkg/jsonschema/draft_04"
-	"github.com/pubg/protoc-gen-jsonschema/pkg/jsonschema/draft_06"
-	"github.com/pubg/protoc-gen-jsonschema/pkg/jsonschema/draft_07"
-	"github.com/pubg/protoc-gen-jsonschema/pkg/jsonschema/draft_201909"
-	"github.com/pubg/protoc-gen-jsonschema/pkg/jsonschema/draft_202012"
-	"github.com/pubg/protoc-gen-jsonschema/pkg/proto"
 )
 
 type BackendTargetGenerator interface {

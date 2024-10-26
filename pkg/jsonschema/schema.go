@@ -1,6 +1,6 @@
 package jsonschema
 
-import "github.com/pubg/protoc-gen-jsonschema/pkg/utils"
+import "github.com/ceggebor/protoc-gen-jsonschema/pkg/utils"
 
 type Schema struct {
 	Version       string

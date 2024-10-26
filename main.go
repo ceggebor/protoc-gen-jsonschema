@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/ceggebor/protoc-gen-jsonschema/pkg/modules"
 	pgs "github.com/lyft/protoc-gen-star/v2"
-	"github.com/pubg/protoc-gen-jsonschema/pkg/modules"
 	"google.golang.org/protobuf/types/pluginpb"
 )
 
-var version string = "develop"
+var version string = "1.0.0"
 
 const helpMessage = `Usage protoc-gen-jsonschema:
 protoc --jsonschema_out=. (OPTIONS) *.proto
@@ -32,7 +32,7 @@ EXAMPLE: I'm not satisfied with the plugin's options. I want to customize every 
 cp jsonschema.proto examples/jsonschema.proto
 protoc --jsonschema_out=. --proto_path=examples examples/jsonschema.proto
 
-Please check https://github.com/pubg/protoc-gen-jsonschema for more details.
+Please check https://github.com/ceggebor/protoc-gen-jsonschema for more details.
 
 FLAGS:
   --version  : print version
