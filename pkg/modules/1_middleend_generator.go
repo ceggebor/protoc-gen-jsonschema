@@ -341,6 +341,8 @@ func buildFromWellKnownField(field pgs.Field, fo *proto.FieldOptions) *jsonschem
 		schema.Type = "object"
 	case WellKnownTypeNullValue:
 		schema.Type = "null"
+	case WellKnownTypeStruct:
+		schema.Type = "object"
 	case WellKnownTypeListValue:
 		schema.AnyOf = []*jsonschema.Schema{
 			{Type: "string"},
@@ -380,6 +382,7 @@ const (
 	WellKnownTypeDuration
 	WellKnownTypeAny
 	WellKnownTypeNullValue
+	WellKnownTypeStruct
 	WellKnownTypeListValue
 	WellKnownTypeValue
 )
@@ -404,10 +407,12 @@ func getWellKnownFieldType(field pgs.Field) WellKnownFieldType {
 		return WellKnownTypeAny
 	case ".google.protobuf.NullValue":
 		return WellKnownTypeNullValue
+	case ".google.protobuf.Struct":
+		return WellKnownTypeStruct
 	case ".google.protobuf.Value":
 		return WellKnownTypeValue
 	case ".google.protobuf.ListValue":
-		return WellKnownTypeListValue	
+		return WellKnownTypeListValue
 	default:
 		return WellKnownTypeNone
 	}
