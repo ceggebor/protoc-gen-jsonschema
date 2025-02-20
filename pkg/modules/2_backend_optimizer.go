@@ -2,6 +2,7 @@ package modules
 
 import (
 	"fmt"
+	"slices"
 
 	"github.com/ceggebor/protoc-gen-jsonschema/pkg/jsonschema"
 	"github.com/ceggebor/protoc-gen-jsonschema/pkg/proto"
@@ -80,12 +81,37 @@ func (o *OptimizerImpl) increaseSchemaRefCount(registry *jsonschema.Registry, re
 	}
 }
 
+var (
+	visited map[string][]string = make(map[string][]string)
+)
+
+func breakVisits(schema *jsonschema.Schema) bool {
+
+	id := schema.ID
+	ref := schema.Ref.String()
+
+	if visited[id] == nil {
+		visited[id] = []string{ref}
+	} else if !slices.Contains(visited[id], ref) {
+		visited[id] = append(visited[id], ref)
+	} else {
+		visited[id] = nil
+		return true
+	}
+
+	return false
+}
+
 func (o *OptimizerImpl) visitSchema(registry *jsonschema.Registry, schema *jsonschema.Schema) {
+
 	if schema == nil {
 		return
 	}
 
 	if !schema.Ref.IsEmpty() {
+		if breakVisits(schema) {
+			return
+		}
 		o.increaseSchemaRefCount(registry, schema.Ref.String())
 		o.visitSchema(registry, registry.GetSchema(schema.Ref.String()))
 	}
